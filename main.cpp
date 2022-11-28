@@ -40,11 +40,12 @@ int main() {
     }
 }
 
+//Table shows that the optimal policy is -1,2. Or the square in the top row second to the left
 void tableGenerator() {
     //This matches the table in 3.8 on page 87
     for (int j = 2; j >= -2; j--) {
         for (int i = -2; i <= 2; i++) {
-            printf("%.1f ", tableModifiedMultiEpisodicRunner( i, j, 100, 10));
+            printf("%.3f ", tableModifiedMultiEpisodicRunner( i, j, 100, 10));
         }
         printf("\n");
     }
